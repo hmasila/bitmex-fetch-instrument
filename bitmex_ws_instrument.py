@@ -38,10 +38,9 @@ def run():
     om = ExchangeInterface()
     # Try/except just keeps ctrl-c from printing an ugly stacktrace
     try:
-    	# while True:
-        	# print(om.instrument())
-        	# sleep(settings.LOOP_INTERVAL)
-       	om.fetch_open_interest()
+    	while True:
+        	print(om.instrument())
+        	sleep(settings.LOOP_INTERVAL)
     except (KeyboardInterrupt, SystemExit):
         sys.exit()
     
