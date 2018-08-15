@@ -20,7 +20,7 @@ class Strategy():
         import pdb; pdb.set_trace()
 
         # hist = ti.cci(ohlcv_candles.high.values, ohlcv_candles.low.values, ohlcv_candles.close.values, 10)
-        hist = talib.CCI(ohlcv_candles['high'], ohlcv_candles['low'], ohlcv_candles.close.values, 10)
+        cci  = talib.CCI(ohlcv_candles['high'], ohlcv_candles['low'], ohlcv_candles.close.values, 10)
 
         # sell
         if hist[-1] < 0:
